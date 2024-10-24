@@ -1,0 +1,37 @@
+/* Estilo para el contenedor de la galería */
+.galeria {
+    display: flex; /* Activa el modelo de caja flexible para la galería */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias filas si es necesario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre los elementos de la galería */
+    max-width: 800px; /* Ancho máximo del contenedor de la galería */
+    margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+}
+
+/* Estilo para las imágenes dentro de la galería */
+.galeria img {
+    width: 23%; /* Ancho de cada imagen, ocupando aproximadamente 1/4 del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área asignada, recortando si es necesario */
+}
+
+/* Estilo adicional para las imágenes en la galería */
+.galeria img {
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidad a las imágenes */
+    transition: all 0.3s ease; /* Suaviza las transiciones de las propiedades CSS cuando cambian */
+}
+
+/* Estilos responsivos para pantallas con un ancho máximo de 768px */
+@media (max-width: 768px) {
+    .galeria img {
+        width: 48%; /* Cambia el ancho de las imágenes a casi la mitad del contenedor */
+    }
+}
+
+/* Estilos responsivos para pantallas con un ancho máximo de 480px */
+@media (max-width: 480px) {
+    .galeria img {
+        width: 95%; /* Cambia el ancho de las imágenes a casi todo el ancho del contenedor */
+    }
+}
